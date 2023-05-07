@@ -16,6 +16,8 @@ appends the modification in the work directory and then stores the result in the
 upper layer which is exposed to the container:
 ![Appending to contentful](example.png)
 
+What I just said was a over abstraction (and a bit of a lie), please read: https://docs.kernel.org/filesystems/overlayfs.html to understand how this actually works.
+
 In short this means you can mount a read-only filesystem to the container and
 still transparently allow ephemeral writes. Think staging environment sharing
 production's assets (hopefully with some level of data washing inbetween).
